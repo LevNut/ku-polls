@@ -2,7 +2,7 @@
 
 ## Description 
 
-A web application created for KU students that used to create poll and survey.
+A web application created for KU students that is used to create poll.
 
 ## Link
 
