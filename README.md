@@ -12,7 +12,7 @@ A Python package needed for this work.
 
 [Link to wiki](https://github.com/LevNut/ku-polls/wiki)
 
-[Vision Statement](https://github.com/LevNut/ku-polls/wiki/Vision Statement)
+[Vision Statement](https://github.com/LevNut/ku-polls/wiki/Vision-Statement)
 
 [Requirements](https://github.com/LevNut/ku-polls/wiki/Requirements)
 
