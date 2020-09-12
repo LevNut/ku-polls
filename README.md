@@ -6,7 +6,8 @@ A web application created for KU students that is used to create poll using Djan
 
 ## Requirements 
 A Python package needed for this work.
-[requirement.txt]() 
+
+[requirement.txt](https://github.com/LevNut/ku-polls/blob/iteration1/requirement.txt) 
 
 ## Link
 
