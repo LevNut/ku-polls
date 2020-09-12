@@ -1,0 +1,3 @@
+#Package
+Django (version >= 3.0.0)
+    - django-environ (using pip to install it)
