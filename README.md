@@ -1,13 +1,14 @@
 # KU-Polls
 
-## Description 
+## Description
 
 A web application created for KU students that is used to create poll using Django.
 
-## Requirements 
+## Requirements
+
 A Python package needed for this work.
 
-[requirement.txt](https://github.com/LevNut/ku-polls/blob/iteration1/requirement.txt) 
+[requirement.txt](https://github.com/LevNut/ku-polls/blob/iteration1/requirement.txt)
 
 ## Link
 
