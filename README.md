@@ -11,6 +11,9 @@ A Python package needed for this work.
 ## Link
 
 [Link to wiki](https://github.com/LevNut/ku-polls/wiki)
+
 [Vision Statement]()
+
 [Requirement]()
+
 [Iteration 1 Plan](https://github.com/LevNut/ku-polls/wiki/Iteration-1-Plan)
