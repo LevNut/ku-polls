@@ -1,5 +1,6 @@
-from django.urls import path
+"""A configuration of urls site."""
 
+from django.urls import path
 from . import views
 
 app_name = 'polls'
