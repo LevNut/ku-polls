@@ -1,5 +1,7 @@
 # KU-Polls
 
+[![Build Status](https://travis-ci.com/LevNut/ku-polls.svg?branch=master)](https://travis-ci.com/LevNut/ku-polls)
+
 ## Description
 
 A web application created for KU students that is used to create poll using Django.
