@@ -1,7 +1,7 @@
 language: python
 
 # you can use Python 3.7 instead
-python: "3.6"
+python: "3.7"
 
 # don't clone more than necessary
 git:
@@ -13,4 +13,4 @@ install:
     
 # script to run tests. Script can have many commands, one per line.
 script: 
-  - python -m unittest discover -p "*_test.py"
+  - python3 -m unittest discover -p "test.py"
