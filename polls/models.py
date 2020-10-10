@@ -22,7 +22,8 @@ class Question (models.Model):
         """
         Check that the polls is already published or not.
 
-        :return: boolean of True or False due to the publishing status
+        Returns:
+            bool: The return value. True if it already published, False if not.
         """
         now = timezone.now()
         if now >= self.pub_date:
@@ -33,7 +34,8 @@ class Question (models.Model):
         """
         Check if the polls is able to vote or not.
 
-        :return: boolean of True or False due to the voting status
+        Returns:
+            bool: The return value. True for the avaliable published poll , False if not.
         """
         now = timezone.now()
         if self.pub_date <= now < self.end_date:
