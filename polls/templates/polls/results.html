@@ -21,9 +21,7 @@
     <tr>
         <th>
             {{ choice.choice_text }}
-        </th>
-        <th>
-            {{ choice.votes}}
+            {{ choice.votes_set.count}}
         </th>
     </tr>
     {% endfor %}

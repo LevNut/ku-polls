@@ -1,0 +1,19 @@
+{% block content %}
+<h2>Register</h2>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    <tr>
+    <td colspan="2">
+    <button type="submit">Register</button>
+    </td>
+    </tr>
+    </table>
+
+    <br>
+    Already Register?
+    <a href="{% url 'polls:login' %}">Login</a>
+</form>
+{% endblock %}
+

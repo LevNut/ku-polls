@@ -13,6 +13,7 @@
         <a href="{% url 'polls:results' question.id %}">Result</a>
     {% endfor %}
     </ul>
+<a href="{% url 'polls:logout' %}">LogOut</a>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}

@@ -1,13 +1,18 @@
 """Model configuration for polls application."""
 
 import datetime
+
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
+
+
+# from django.contrib.auth import User
 
 # Create your models here.
 
 
-class Question (models.Model):
+class Question(models.Model):
     """A model class that contains a method about question in polls."""
 
     question_text = models.CharField(max_length=200)
@@ -38,9 +43,7 @@ class Question (models.Model):
             bool: The return value. True for the avaliable published poll , False if not.
         """
         now = timezone.now()
-        if self.pub_date <= now < self.end_date:
-            return True
-        return False
+        return self.pub_date <= now < self.end_date
 
     def was_published_recently(self):
         """Check that the polls is recently published or not."""
@@ -57,8 +60,13 @@ class Choice(models.Model):
 
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
 
     def __str__(self):
         """Given readable string representation of an object."""
         return self.choice_text
+
+
+class Vote(models.Model):
+    question = models.ForeignKey(Question, blank=True, null=True, on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, blank=True, null=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
