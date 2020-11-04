@@ -3,6 +3,7 @@ import logging
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -86,7 +87,8 @@ def login_page(request):
     if request.user.is_authenticated:
         return redirect('polls:index')
 
-    if request.method == "POST":
+    if request.method == 'POST':
+        form = AuthenticationForm(request.POST)
         username = request.POST.get("username")
         password = request.POST.get("password")
 
@@ -98,10 +100,10 @@ def login_page(request):
             return redirect('polls:index')
         else:
             messages.info(request, 'Username or Password is incorrect')
-            logger.warning("Login Attempt: Unsuccessful login as {} at {}".format(request.user.username,
+            logger.warning("Login Attempt: Unsuccessful login as {} at {}".format(request.POST['username'],
                                                                                   request.META.get('REMOTE_ADDR')))
-    context = {}
-    return render(request, 'registration/login.html', context)
+    form = AuthenticationForm()
+    return render(request, 'registration/login.html', {'form': form})
 
 
 def logout_page(request):

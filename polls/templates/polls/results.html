@@ -4,28 +4,31 @@
 
 <style>
     table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
+        border: 1px solid black;
+        border-collapse: collapse;
     }
-    </style>
+</style>
 
 
 <h1>{{ question.question_text }}</h1>
 
 <table style="width:100%">
     <tr>
-      <th>choice</th>
-      <th>vote</th> 
+        <th>choice</th>
+        <th>vote</th>
     </tr>
     {% for choice in question.choice_set.all %}
-    <tr>
-        <th>
-            {{ choice.choice_text }}
-            {{ choice.votes_set.count}}
-        </th>
-    </tr>
+        <tr>
+            <th>
+                {{ choice.choice_text }}
+            </th>
+            <th>
+                {{ choice.vote_set.count }}
+            </th>
+
+        </tr>
     {% endfor %}
-  </table>
+</table>
 
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a><br>
